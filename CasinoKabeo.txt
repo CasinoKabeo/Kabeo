@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kabeo Roulette</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kabeo Casino</h1>
+  <button onclick="spin()">Lancer la roulette</button>
+  <h2 id="resultat"></h2>
+
+  <script>
+    function spin() {
+      const multiplicateurs = [0, 2, 5, 10];
+      const choix = multiplicateurs[Math.floor(Math.random() * multiplicateurs.length)];
+      document.getElementById('resultat').innerText = "Multiplicateur: x" + choix;
+    }
+  </script>
+</body>
+</html>
